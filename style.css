@@ -1,0 +1,126 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+html {
+    font-family: Roboto, sans-serif;
+    font-size: 20px;
+    color: #737f8d;
+}
+#root {
+    min-height: 1080px;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 33.33% 33.33% 33.33%;
+    grid-template-rows: 5% 30% 40% 20% 40%;
+    grid-template-areas: 
+                    'bar bar bar'
+                    'header header header'
+                    'featureOrange featureRed featurePurple'
+                    'signup signup signup'
+                    'divContent divContent divContent'
+}
+#bar{
+    position:relative;
+    background-color:#5995da;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    grid-area: bar;
+}
+
+#header{
+    position:relative;
+    background-color: #b2d6ff;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    grid-area: header;
+}
+
+#divContent{
+    position:relative;
+    background-color: #eaedf0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    grid-area: divContent;
+}
+
+#signup{
+    position:relative;
+    background-color: #d6e9fe;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    grid-area: signup;
+}
+
+#featureOrange{
+    position:relative;
+    background-color: #f5cf8e;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    grid-area: featureOrange;
+}
+
+#featureRed{
+    position:relative;
+    background-color: #f09a9d;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    grid-area: featureRed;
+}
+
+#featurePurple{
+    position:relative;
+    background-color: #c8c6fa;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    grid-area: featurePurple;
+}
+
+@media screen and (max-width: 768px) {
+    #root {
+        grid-template-columns: 50% 50%;
+        grid-template-rows: 5% 30% 40% 30% 30%;
+        grid-template-areas: 
+            'bar bar'
+            'header header'
+            'divContent divContent'
+            'signup featureOrange'
+            'featureRed featurePurple';
+    } 
+}
+@media screen and (max-width: 425px) {
+    #root {
+        grid-template-columns: 100%;
+        grid-template-rows: 5% 25% 45% 25% 25% 25% 25%;
+        grid-template-areas: 
+            'bar'
+            'header'
+            'divContent'
+            'signup'
+            'featureOrange'
+            'featureRed'
+            'featurePurple';
+    } 
+}
